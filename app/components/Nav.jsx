@@ -1,14 +1,15 @@
 var React = require('react');
 var {Link, IndexLink} = require('react-router');
 
-var Nav = React.createClass({
+var Nav =() => {
  
-    render: function() {
         return(
-            <div className = "topbar">
+            <div className = "top-bar">
                 <div className = "top-bar-left">
                     <ul className="menu">
-                        <li className ="menu-text"> React Timer App</li>
+                        <li className ="menu-text"> 
+                        React Timer App
+                        </li>
                         <li>
                             <IndexLink to="/" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>Timer</IndexLink>
                         </li>
@@ -20,12 +21,11 @@ var Nav = React.createClass({
                 <div className="top-bar-right">
                     <ul className="menu">
                         <li>
-                            CreatedBy<a href='#'>Nikhil</a>
+                            Created by<a href="http://www.nikhilbhanushali21.github.io" target="_blank">Nikhil</a>
                         </li>
                     </ul>
                 </div>
             </div>
         );
-    }
-});
+    };
 module.exports= Nav;
